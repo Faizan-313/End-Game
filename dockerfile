@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port Railway will use
-EXPOSE 5173
+EXPOSE 4173
 
 # Run the app in preview mode
 CMD ["npm", "run", "start"]
