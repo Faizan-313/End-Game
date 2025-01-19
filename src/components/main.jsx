@@ -99,6 +99,13 @@ export default function Main() {
         setTimeResetKey((prev)=> !prev);
     }
 
+    //for scroll to new game button
+    useEffect(()=>{
+        if(gameOver){
+            document.querySelector('.new-game').scrollIntoView({behavior: "smooth"});
+        }
+    },[gameOver]);
+
     return (
         <main>
             {gameWon && <Confetti recycle={false} numberOfPieces={2000} />}
@@ -131,7 +138,7 @@ export default function Main() {
                 {keyboardAlphabets}
             </section>
 
-            {gameOver && <button className="new-game" onClick={newGame}>New Game</button>}
+            {gameOver && <button  className="new-game" onClick={newGame}>New Game</button>}
         </main>
     )
 }

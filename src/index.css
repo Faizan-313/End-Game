@@ -17,14 +17,14 @@ main{
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  margin-top: 4%;
+  margin-top: 1%;
 }
 
 header{
   text-align: center;
 }
 h1{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #F9F4DA;
 }
@@ -33,6 +33,18 @@ header > p{
   font-size:  0.875rem;
   max-width: 360px;
   color: #8E8E8E;
+}
+
+.logo-heading{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.logo{
+  width: 70px;
+  height: auto;
+  background: none;
 }
 
 .game-status{
@@ -82,7 +94,7 @@ section.language-chips{
   align-items: center;
   gap: 5px;
   max-width: 350px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 span.chip{
   padding: 4.5px;
@@ -108,7 +120,7 @@ section.answer-section{
   display: flex;
   justify-content: center;
   gap: 2px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 section.answer-section > span{
@@ -128,7 +140,7 @@ section.keyboard{
   flex-wrap: wrap;
   max-width: 450px;
   gap: 8px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 section.keyboard > button{
@@ -154,6 +166,7 @@ button.new-game {
   display: block;
   margin-inline: auto;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 section.keyboard > button.correct{
