@@ -7,8 +7,8 @@
     "start": "vite preview",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint ."
   },
   "dependencies": {
     "clsx": "^2.1.1",
