@@ -4,10 +4,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/Faizan-313/end-game",
   "scripts": {
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "clsx": "^2.1.1",
