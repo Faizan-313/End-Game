@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 export default function Timer(prop){
-    const [timeLeft, setTimeLeft] = useState(120);
+    const [timeLeft, setTimeLeft] = useState(60);
     const [start, setStart] = useState(false)
 
     //start the game on click on first guess
@@ -35,7 +35,7 @@ export default function Timer(prop){
 
     //change styling with time
     const dynamicStyle = {
-        color: timeLeft <= 10 ? "red" : timeLeft <= 25 ? "orange" : "white",
+        color: timeLeft <= 12 ? "red" : timeLeft <= 32 ? "orange" : "white",
         fontWeight: timeLeft <= 20 ? "bold" : "normal",
         transition: "color 0.6s, font-weight 0.6s" 
     };

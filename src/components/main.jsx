@@ -13,6 +13,7 @@ export default function Main() {
     const [guessedLetter, setGuessedLetter] = useState([]);
     const [timeResetKey, setTimeResetKey] = useState(false);
     const [gameLost, setGameLost] = useState()
+    const [scrollBack, setScrollBack] = useState(false)
 
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
 
@@ -97,17 +98,22 @@ export default function Main() {
         setWord(getWord());
         setGuessedLetter([]); 
         setTimeResetKey((prev)=> !prev);
+        setScrollBack((prev) => !prev);
     }
 
     //for scroll to new game button
     useEffect(()=>{
-        if(gameOver){
+        if(gameOver && guessedLetter.length !== 0){
             document.querySelector('.new-game').scrollIntoView({behavior: "smooth"});
         }
-    },[gameOver]);
+        if(scrollBack){
+            console.log("hello")
+            document.querySelector('.body').scrollIntoView({behavior: "smooth"});
+        }
+    },[gameOver,guessedLetter,scrollBack]);
 
     return (
-        <main>
+        <main className="main">
             {gameWon && <Confetti recycle={false} numberOfPieces={2000} />}
             <Header />
             <Status result={gameWon} lastLetter={isLastGuessIncorrect} status={gameOver} class={statusClass} text={farewellText} />

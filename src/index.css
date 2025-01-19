@@ -134,6 +134,14 @@ section.answer-section > span{
   border-bottom: 1px solid #F9F4DA;
 }
 
+@media screen and (max-width: 768px) {
+  section.answer-section > span{
+    height: 30px;
+    width: 30px;
+    font-size: 1.025rem;
+  }
+}
+
 section.keyboard{
   display: flex;
   justify-content: center;
@@ -150,6 +158,13 @@ section.keyboard > button{
   border: 1px solid #D7D7D7;
   border-radius: 3px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  section.keyboard > button{
+    height: 30px;
+    width: 30px;
+  }
 }
 
 section.keyboard > button:disabled{
@@ -220,3 +235,5 @@ section.timer > h2{
   margin: 0 0 3px;
   font-weight: 400;
 }
+
+
