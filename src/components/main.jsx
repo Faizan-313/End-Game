@@ -107,7 +107,6 @@ export default function Main() {
             document.querySelector('.new-game').scrollIntoView({behavior: "smooth"});
         }
         if(scrollBack){
-            console.log("hello")
             document.querySelector('.body').scrollIntoView({behavior: "smooth"});
         }
     },[gameOver,guessedLetter,scrollBack]);
