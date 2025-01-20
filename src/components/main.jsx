@@ -6,6 +6,7 @@ import clsx from 'clsx';
 import { getFarewellText, getWord} from "../assets/utils.js"
 import Confetti from 'react-confetti'
 import Timer from "./timer.jsx";
+import Footer from "./footer.jsx";
 
 
 export default function Main() {
@@ -95,17 +96,19 @@ export default function Main() {
 
     //function for new game
     function newGame() {
+        setScrollBack((prev) => !prev);
         setWord(getWord());
         setGuessedLetter([]); 
         setTimeResetKey((prev)=> !prev);
-        setScrollBack((prev) => !prev);
     }
 
-    //for scroll to new game button
+    //for auto scroll
     useEffect(()=>{
+        //to the new game button
         if(gameOver && guessedLetter.length !== 0){
             document.querySelector('.new-game').scrollIntoView({behavior: "smooth"});
         }
+        //to the top back
         if(scrollBack){
             document.querySelector('.body').scrollIntoView({behavior: "smooth"});
         }
@@ -144,6 +147,7 @@ export default function Main() {
             </section>
 
             {gameOver && <button  className="new-game" onClick={newGame}>New Game</button>}
+            <Footer />
         </main>
     )
 }
