@@ -117,7 +117,7 @@ export default function Main() {
 
     return (
         <main className="main">
-            {gameWon && <Confetti recycle={false} numberOfPieces={2000} />}
+            {gameWon && <Confetti width={window.innerWidth} height={window.innerHeight} recycle={false} numberOfPieces={2000} />}
             <Header />
             <Status result={gameWon} lastLetter={isLastGuessIncorrect} status={gameOver} class={statusClass} text={farewellText} />
 
@@ -135,7 +135,7 @@ export default function Main() {
                     <img id="hint-icon" src={hintIcon} alt="hint-icon" />
                 </div>
             </section>
-            
+
             <section className="answer-section">
                 {wordLetters}
             </section>
