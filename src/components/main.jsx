@@ -3,10 +3,11 @@ import Status from "./status"
 import { languages } from "../assets/languages.js"
 import { useEffect, useState } from "react"
 import clsx from 'clsx';
-import { getFarewellText, getWord} from "../assets/utils.js"
+import { getFarewellText, getWord, getHint} from "../assets/utils.js"
 import Confetti from 'react-confetti'
 import Timer from "./timer.jsx";
 import Footer from "./footer.jsx";
+import hintIcon from "../../Public/images/hint-icon.png";
 
 
 export default function Main() {
@@ -92,7 +93,7 @@ export default function Main() {
         won: gameWon,
         lost: gameLost,
         farewell: isLastGuessIncorrect
-    })
+    });
 
     //function for new game
     function newGame() {
@@ -130,8 +131,11 @@ export default function Main() {
 
             <section className="timer">
                 <Timer word={word.length * 10} func = {timeEnded} gameStart = {guessedLetter.length}  gameStatus = {gameOver} key={timeResetKey}/>
+                <div id="hint-container" hint = {getHint()}>
+                    <img id="hint-icon" src={hintIcon} alt="hint-icon" />
+                </div>
             </section>
-
+            
             <section className="answer-section">
                 {wordLetters}
             </section>

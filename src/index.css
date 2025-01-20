@@ -220,13 +220,38 @@ section.sr-only {
 section.timer{
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  gap: 10px;
   align-items: center;
 }
 
 section.timer > h2{
   margin: 0 0 3px;
   font-weight: 400;
+  margin-left: 20px;
 }
 
+#hint-container {
+  position: relative;
+  margin-left: 20px;
+}
 
+#hint-icon {
+  height: 28px;
+  width: 28px;
+  cursor: pointer;
+}
+
+#hint-container:hover::after {
+  content: attr(hint);
+  position: absolute;
+  background-color: #202521;
+  color: #efe8e8;
+  padding: 10px;
+  border-radius: 3px;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: wrap;
+  z-index: 10;
+}
