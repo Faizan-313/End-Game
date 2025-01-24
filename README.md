@@ -29,7 +29,7 @@ npm install
 ```bash
 npm run dev
 ```
-The application will be available at [http://localhost:3000](http://localhost:3000) or the port specified in your environment.
+The application will be available on the port specified in your environment.
 
 ## Technologies Used
 
@@ -43,12 +43,14 @@ The application will be available at [http://localhost:3000](http://localhost:30
 
 ## Project Structure
 ```plaintext
+public/
+├── images
 end-game/
 ├── src/
-│   ├── assets/         # Assets like images or styles
+│   ├── assets/         
 │   ├── components/     # Reusable components
 │   ├── App.js          # Main application component
-│   └── main.js         # Entry point of the application
+
 ├── .gitignore          # Git ignore file
 ├── index.html          # Root HTML file
 ├── package.json        # Project dependencies and scripts
